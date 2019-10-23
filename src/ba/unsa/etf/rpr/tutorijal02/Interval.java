@@ -7,6 +7,10 @@ public class Interval {
 
     Interval (double pocetna, double krajnja, boolean pocPripada, boolean krajPripada) {
         if (pocetna > krajnja) throw new IllegalArgumentException ("Interval nije ok!");
+        this.pocetna = pocetna;
+        this.krajnja = krajnja;
+        this.pocPripada = pocPripada;
+        this.krajPripada = krajPripada;
     }
 
     Interval () {
@@ -32,11 +36,14 @@ public class Interval {
 
     @Override
     public String toString () {
-        if (pocPripada == false && krajPripada == false) return ("(" + this.pocetna + "," + this.krajnja + ")") ;
-        if (pocPripada == true && krajPripada == false) return  ("[" + this.pocetna + "," + this.krajnja + ")" );
-        if (pocPripada == false && krajPripada == true) return ("(" + this.pocetna + "," + this.krajnja + "]" );
-        if (pocPripada == true && krajPripada == true) return ("[" + this.pocetna + "," + this.krajnja + "]" );
+        if (pocPripada == true && krajPripada == true) return  "[" + pocetna + "," + krajnja + "]";
+        else if (pocPripada == true) return "[" + pocetna + "," + krajnja + ")";
+        else if (krajPripada == true) return "(" + pocetna + "," + krajnja + "]";
+        else {
+            if (pocetna != 0 || krajnja != 0) return "(" + pocetna + "," + krajnja + ")";
+        }
         return "()";
+
     }
 
     @Override

@@ -3,14 +3,14 @@ package ba.unsa.etf.rpr.tutorijal02;
 import static org.junit.jupiter.api.Assertions.*;
 
 class IntervalTest {
-/*
-    @org.junit.jupiter.api.Test
 
-    void ctorExceptionTest() {
+ /*  @org.junit.jupiter.api.Test
+
+  /*  void ctorExceptionTest() {
         assertThrows(IllegalArgumentException.class, () -> {
             Interval i = new Interval(2.5, 2.4, true, true);
         });
-    }
+    }*/
 
     @org.junit.jupiter.api.Test
     void toStringTest() {
@@ -18,7 +18,7 @@ class IntervalTest {
         assertEquals("[1.1,2.5)", i.toString());
     }
 
-    @org.junit.jupiter.api.Test
+/*    @org.junit.jupiter.api.Test
     void isIn() {
         Interval i = new Interval(1.1, 2.5, true, false);
         assertTrue(i.isIn(2.3));
@@ -40,14 +40,14 @@ class IntervalTest {
     void isNull() {
         Interval i = new Interval();
         assertTrue(i.isNull());
-    }
+    }*/
 
     @org.junit.jupiter.api.Test
     void toString2() {
         Interval i = new Interval();
         assertEquals("()", i.toString());
     }
-
+/*
     @org.junit.jupiter.api.Test
     void intersect() {
         Interval i = new Interval(1.1, 2.5, true, false);
@@ -61,7 +61,7 @@ class IntervalTest {
         Interval i2 = new Interval(2.2, 2.6, true, true);
         Interval i3 = Interval.intersect(i, i2);
         assertEquals("[2.2,2.5)", i3.toString());
-    } */
+    }
 
     @org.junit.jupiter.api.Test
     void equals() {
